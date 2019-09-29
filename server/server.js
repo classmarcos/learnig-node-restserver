@@ -19,7 +19,7 @@ app.use(require('./routes/usuario'));
 
 
 
-mongoose.connect(process.env.URLDB, (err, res) => {
+/*mongoose.connect(process.env.URLDB, (err, res) => {
 
     if (err) throw err;
 
@@ -27,7 +27,7 @@ mongoose.connect(process.env.URLDB, (err, res) => {
 
 });
 
-
+/*
 
 app.listen(process.env.PORT, () => {
     console.log('Escuchando puerto: ', process.env.PORT);
