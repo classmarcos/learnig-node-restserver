@@ -1,7 +1,7 @@
 //========
 //puerto
 //=======
-process.env.PORT = process.env.PORT || 3000;
+//process.env.PORT = process.env.PORT || 3000;
 
 //==========
 //ENTORNO
@@ -15,3 +15,30 @@ if (process.env.NODE_ENV === 'dev') {
 }
 
 process.env.URLDB = urlDB;*/
+
+
+
+// ============================
+//  Puerto
+// ============================
+process.env.PORT = process.env.PORT || 3000;
+
+
+// ============================
+//  Entorno
+// ============================
+process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
+
+
+// ============================
+//  Base de datos
+// ============================
+let urlDB;
+process.env.MONGO_URI = 'mongodb+srv://mrcos:anaconda459@cafe-sjeu0.mongodb.net/test?retryWrites=true&w=majority';
+
+if (process.env.NODE_ENV === 'dev') {
+    urlDB = 'mongodb://localhost:27017/cafe';
+} else {
+    urlDB = process.env.MONGO_URI;
+}
+process.env.URLDB = urlDB;
