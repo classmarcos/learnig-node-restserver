@@ -7,7 +7,7 @@ const app = express();
 
 app.get('/usuario', function(req, res) {
 
-    /* let desde = req.query.desde || 0;
+    let desde = req.query.desde || 0;
     desde = Number(desde);
 
     let limite = req.query.limite || 5;
@@ -37,8 +37,6 @@ app.get('/usuario', function(req, res) {
 
 
         });
-*/
-    console.log('GET');
 
 });
 
