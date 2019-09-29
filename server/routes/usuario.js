@@ -30,16 +30,16 @@ app.get('/usuario', function(req, res) {
                     ok: true,
                     usuarios,
                     cuantos: conteo
-                })
+                });
             });
 
 
 
 
-        })
+        });
 
 
-})
+});
 
 
 app.post('/usuario', function(req, res) {
@@ -89,7 +89,7 @@ app.put('/usuario/:id', function(req, res) {
         });
     });
 
-})
+});
 
 
 app.delete('/usuario/:id', function(req, res) {
@@ -122,9 +122,9 @@ app.delete('/usuario/:id', function(req, res) {
         res.json({
             ok: true,
             usuario: usuarioBorrado
-        })
+        });
     });
-})
+});
 
 
 module.exports = app;
