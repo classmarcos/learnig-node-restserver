@@ -5,6 +5,10 @@ const _ = require('underscore');
 
 const app = express();
 
+app.get('/', function(req, res) {
+    console.log('get conection');
+});
+
 app.get('/usuario', function(req, res) {
 
     let desde = req.query.desde || 0;
