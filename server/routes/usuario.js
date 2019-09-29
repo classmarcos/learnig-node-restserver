@@ -1,6 +1,6 @@
 const express = require('express');
 const Usuario = require('../models/usuario');
-const bcrypt = require('bcryptjs');
+//const bcrypt = require('bcryptjs');
 const _ = require('underscore');
 
 const app = express();
@@ -47,7 +47,8 @@ app.post('/usuario', function(req, res) {
     let usuario = new Usuario({
         nombre: body.nombre,
         email: body.email,
-        password: bcrypt.hashSync(body.password, 10),
+        password: body.password,
+        //password: bcrypt.hashSync(body.password, 10),
         role: body.role
     });
 
