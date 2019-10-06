@@ -51,7 +51,7 @@ process.env.SEED = process.env.SEED || 'este-es-es-seed-desarrollo';
 //  Base de datos
 // ============================
 let urlDB;
-process.env.MONGO_URI = 'mongodb+srv://mrcos:anaconda459@cafe-sjeu0.mongodb.net/test?retryWrites=true&w=majority';
+process.env.MONGO_URI = 'mongodb+srv://mrcos:anaconda459@cafe-sjeu0.mongodb.net/cafe?retryWrites=true&w=majority';
 
 if (process.env.NODE_ENV === 'dev') {
     urlDB = 'mongodb://localhost:27017/cafe';
